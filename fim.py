@@ -21,8 +21,8 @@ def Check_Integrity(path):
     with open(path, "r") as a_file:
         for line in a_file:
             stripped_line = line.strip()
-            filepath = line.split('|')[0]
-            filehash = line.split('|')[1]
+            filepath = line.split('.')[0]
+            filehash = line.split('.')[1]
             filepath_filehash_dict[filepath] = filehash
 
     while True:
